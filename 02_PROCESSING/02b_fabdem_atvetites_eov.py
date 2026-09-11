@@ -1,8 +1,8 @@
 import rasterio
 from rasterio.warp import calculate_default_transform, reproject, Resampling
 
-dem_path = "01_DATA/DEM/Kiskoros_pilot_DEM_raw.tif"
-dem_eov_path = "02_PROCESSING/Kiskoros_DEM_EOV.tif"
+dem_path = "01_DATA/DEM/Kiskoros_FABDEM_raw.tif"
+dem_eov_path = "02_PROCESSING/Kiskoros_FABDEM_EOV.tif"
 
 CEL_VETULET = "EPSG:23700"   # Magyar EOV
 NODATA = -9999.0             # Ezzel jeloljuk az "itt nincs adat" pixeleket
