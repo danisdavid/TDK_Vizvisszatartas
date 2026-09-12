@@ -1,9 +1,10 @@
 import rasterio
 import numpy as np
 
+
 utvonalak = {
-    "Eredeti (WGS84)": "01_DATA/DEM/Kiskoros_pilot_DEM_raw.tif",
-    "Atvetitett (EOV)": "02_PROCESSING/Kiskoros_DEM_EOV.tif",
+    "Copernicus (EOV)": "02_PROCESSING/Kiskoros_DEM_EOV.tif",
+    "FABDEM (EOV)":     "02_PROCESSING/Kiskoros_FABDEM_EOV.tif",
 }
 
 for nev, ut in utvonalak.items():
@@ -22,4 +23,5 @@ for nev, ut in utvonalak.items():
 
         # A hatarolo teglalap - ezt hasznaljuk majd a FABDEM letoltesehez
         print(f"  Hatarok: {dem.bounds}")
+        print(f"  Meret (szelesseg x magassag): {dem.width} x {dem.height}")
         print()
